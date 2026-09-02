@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Granule</title>
+    <style>html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #0a0a0a;
+        overflow: hidden;
+        cursor: url("./dot.png") 4 0, default;
+      }
+      #app {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; 
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        
+        box-sizing: border-box;
+        padding: 0;
+        gap: 0;
+      }
+      
+      #app > .col-side {
+        flex: 0 0 auto;
+        max-height: 100vh;
+        max-height: 100dvh;
+        overflow: auto;
+        display: flex;
+        align-items: stretch;
+      }
+      #app > .col-side.col-right { justify-content: flex-end; }
+      
+      #app > .col-center {
+        flex: 1 1 auto;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      #app > .col-center > .canvas-host {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+      
+      .canvas-host canvas { touch-action: none; }
+      html, body { overscroll-behavior: none; }
+
+      
+      body.touch-mode #app > .col-side.col-left { display: none; }
+      body.touch-mode.dock-open #app > .col-side.col-left { display: flex; -webkit-overflow-scrolling: touch; }
+      body.touch-mode #app > .col-side.col-right { display: none; }
+      
+      body.touch-mode #app { padding-right: 124px; box-sizing: border-box; }
+      
+      body.touch-mode .granule-dock canvas { touch-action: pan-y; }
+      body.touch-mode .granule-dock > div { -webkit-overflow-scrolling: touch; }
+
+      
+      #granule-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: #0a0a0a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: opacity 0.55s ease;
+        pointer-events: none;
+        user-select: none;
+      }
+      
+      #granule-loader .gl-word {
+        width: min(66vw, 560px);
+        height: auto;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+      
+      #granule-loader .gl-bar {
+        width: min(260px, 58vw);
+        height: 12px;
+        box-sizing: border-box;
+        border: 1px solid #35302a;
+        background: #131110;
+        padding: 2px;
+      }
+      #granule-loader .gl-fill {
+        height: 100%;
+        width: 0%;
+        background: #8b929c; 
+        transition: none;
+      }
+      #granule-loader .gl-status {
+        font-family: ui-monospace, Consolas, monospace; 
+        font-size: 12px;
+        color: #6f665c;
+        min-height: 1em;
+      }</style>
+  </head>
+  <body>
+    
+    <div id="granule-loader">
+      <img class="gl-word" src="./granule-wordmark.png" alt="GRANULE" />
+      <div class="gl-bar"><div class="gl-fill" id="gl-fill"></div></div>
+      <div class="gl-status" id="gl-status">loading…</div>
+    </div>
+    <script>(function(){window['Granule']=window['Granule']||{};var a=document['getElementById']('gl-fill');var b=document['getElementById']('gl-status');var c=document['getElementById']('granule-loader');window['Granule']['loadProgress']=function(d,e){if(a)a['style']['width']=Math['max'](0x0,Math['min'](0x64,d))+'%';if(e!=null&&b)b['textContent']=e;};window['Granule']['loadDone']=function(){if(!c||c['__done'])return;c['__done']=!![];if(a)a['style']['width']='100%';c['style']['opacity']='0';setTimeout(function(){if(c['parentNode'])c['parentNode']['removeChild'](c);},0x28a);};}());</script>
+
+    <div id="app"></div>
+
+    
+
+    
+    <script>window['GRANULE_FILL_VIEW']=!![];window['module']={'exports':{}};window['exports']=window['module']['exports'];</script>
+    <script src="html/18886094/lib/rapier.js"></script>
+    <script>window['RAPIER']=window['exports'];window['addEventListener']('error',function(a){if(/ResizeObserver loop/['test'](a['message']||''))return;var b=document['getElementById']('granule-error');if(!b){b=document['createElement']('div');b['id']='granule-error';b['style']['cssText']='position:fixed;left:0;right:0;bottom:0;z-index:99;background:#a00;'+'color:#fff;font:12px/1.4\x20monospace;padding:8px;white-space:pre-wrap;';document['body']['appendChild'](b);}b['textContent']='JS\x20ERROR:\x20'+(a['message']||a['error'])+'\x0a'+(a['error']&&a['error']['stack']||'');});</script>
+
+    
+    <script>window['Granule']=window['Granule']||{};if(location.hash)try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}</script>
+    <script src="html/18886094/js/audioAssets.js"></script>
+    <script src="html/18886094/js/logoAsset.js"></script>
+    <script src="html/18886094/js/bundle.js"></script>
+  </body>
+</html>
