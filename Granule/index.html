@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<?xml encoding="utf-8" ?><html lang="en">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="Icon.ico" />
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Granule</title>
     <style>html,
       body {
@@ -12,7 +13,7 @@
         height: 100%;
         background: #0a0a0a;
         overflow: hidden;
-        cursor: url("https://html-classic.itch.zone/html/18560370/dot.png") 4 0, default;
+        cursor: url("./dot.png") 4 0, default;
       }
       #app {
         width: 100vw;
@@ -117,9 +118,9 @@
   <body>
     
     <div id="granule-loader">
-      <img class="gl-word" src="./granule-wordmark.png" alt="GRANULE">
+      <img class="gl-word" src="./granule-wordmark.png" alt="GRANULE" />
       <div class="gl-bar"><div class="gl-fill" id="gl-fill"></div></div>
-      <div class="gl-status" id="gl-status">loading&hellip;</div>
+      <div class="gl-status" id="gl-status">loading…</div>
     </div>
     <script>(function(){window['Granule']=window['Granule']||{};var a=document['getElementById']('gl-fill');var b=document['getElementById']('gl-status');var c=document['getElementById']('granule-loader');window['Granule']['loadProgress']=function(d,e){if(a)a['style']['width']=Math['max'](0x0,Math['min'](0x64,d))+'%';if(e!=null&&b)b['textContent']=e;};window['Granule']['loadDone']=function(){if(!c||c['__done'])return;c['__done']=!![];if(a)a['style']['width']='100%';c['style']['opacity']='0';setTimeout(function(){if(c['parentNode'])c['parentNode']['removeChild'](c);},0x28a);};}());</script>
 
@@ -129,13 +130,13 @@
 
     
     <script>window['GRANULE_FILL_VIEW']=!![];window['module']={'exports':{}};window['exports']=window['module']['exports'];</script>
-    <script src="../../js/rapier.69b26.js"></script>
+    <script src="html/18886094/lib/rapier.js"></script>
     <script>window['RAPIER']=window['exports'];window['addEventListener']('error',function(a){if(/ResizeObserver loop/['test'](a['message']||''))return;var b=document['getElementById']('granule-error');if(!b){b=document['createElement']('div');b['id']='granule-error';b['style']['cssText']='position:fixed;left:0;right:0;bottom:0;z-index:99;background:#a00;'+'color:#fff;font:12px/1.4\x20monospace;padding:8px;white-space:pre-wrap;';document['body']['appendChild'](b);}b['textContent']='JS\x20ERROR:\x20'+(a['message']||a['error'])+'\x0a'+(a['error']&&a['error']['stack']||'');});</script>
 
     
-    <script>window['Granule']=window['Granule']||{};</script>
-    <script src="../../js/audioAssets.a106a.js"></script>
-    <script src="../../js/logoAsset.a106a.js"></script>
-    <script src="../../js/bundle.a106a.js"></script>
+    <script>window['Granule']=window['Granule']||{};if(location.hash)try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}</script>
+    <script src="html/18886094/js/audioAssets.js"></script>
+    <script src="html/18886094/js/logoAsset.js"></script>
+    <script src="html/18886094/js/bundle.js"></script>
   </body>
 </html>
