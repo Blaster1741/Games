@@ -1,0 +1,15 @@
+{
+    "name": "War The Knights Battle Arena Swords 3D",
+    "short_name": "War The Knights Battle Arena Swords 3D",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#1F1F20",
+    "theme_color": "#000",
+    "description": "",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }
